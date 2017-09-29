@@ -109,6 +109,19 @@ same tweets if this app is called repeatedly; each copy will have its own value
 for `"collected_at"` and their metadata (e.g., retweet and favourite counts) may
 have changed, so they will be distinguishable.
 
+As an example of what to do with the output file, you could pull out the ids,
+collected timestamps and retweet and favourite counts to begin with. I recommend
+using `jq`. E.g.
+
+<pre>
+prompt>  cat updated-tweets.json | \
+    jq '.|"\(.id_str),\(.collected_at),\(.retweet_count),\(.favorite_count)"' | \
+    sort | \
+    sed 's/^\"//' | sed 's/\"$//' > updated-tweet-metadata.csv
+</pre>
+
+## Rate limits
+
 Attempts have been made to account for Twitter's rate limits, so at times the
 app will pause, waiting until the rate limit has refreshed. It reports how long
 it will wait when it does have to pause.
