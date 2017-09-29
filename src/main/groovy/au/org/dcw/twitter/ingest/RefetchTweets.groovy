@@ -85,7 +85,7 @@ class RefetchTweets {
 
         // JCommander instance parses args, populates fields of theApp
         JCommander argsParser = new JCommander(theApp, args)
-        argsParser.setProgramName("RefetchTweets")
+        argsParser.setProgramName("bin/refetch-tweets[.bat]")
 
         if (help) {
             StringBuilder sb = new StringBuilder()

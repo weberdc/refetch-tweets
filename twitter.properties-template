@@ -1,0 +1,8 @@
+# Your Twitter app credentials
+oauth.consumerKey = *************************
+oauth.consumerSecret = ****************************
+
+oauth.accessToken = *********************************
+oauth.accessTokenSecret = **********************************
+
+#debug = true
