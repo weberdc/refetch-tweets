@@ -115,7 +115,7 @@ using `jq`. E.g.
 
 <pre>
 prompt>  cat updated-tweets.json | \
-    jq '.|"\(.id_str),\(.collected_at),\(.retweet_count),\(.favorite_count)"' | \
+    jq '.|"\"\(.id_str)\",\(.collected_at),\(.retweet_count),\(.favorite_count)"' | \
     sort | \
     sed 's/^\"//' | sed 's/\"$//' > updated-tweet-metadata.csv
 </pre>
