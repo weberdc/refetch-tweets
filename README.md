@@ -102,8 +102,12 @@ prompt> bin/refetch-tweets \
 </pre>
 
 This will create a file `test-output.json` which will contain updated versions
-of the tweets in the input file, each with an extra field: `"collected_at"`. This
-field is a timestamp formatted the same way as the `"created_at"` field.
+of the tweets in the input file, each with an extra field: `"collected_at"`.
+This field is a timestamp formatted the same way as the `"created_at"` field.
+**N.B.** Be aware that the output file will end up with multiple copies of the
+same tweets if this app is called repeatedly; each copy will have its own value
+for `"collected_at"` and their metadata (e.g., retweet and favourite counts) may
+have changed, so they will be distinguishable.
 
 Attempts have been made to account for Twitter's rate limits, so at times the
 app will pause, waiting until the rate limit has refreshed. It reports how long
