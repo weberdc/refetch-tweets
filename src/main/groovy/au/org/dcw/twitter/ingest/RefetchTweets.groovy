@@ -24,10 +24,8 @@ import java.nio.file.Files
 import java.nio.file.Paths
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
-import java.util.Locale
 
 import twitter4j.RateLimitStatus
-import twitter4j.RateLimitStatusEvent
 import twitter4j.RateLimitStatusListener
 import twitter4j.ResponseList
 import twitter4j.Status

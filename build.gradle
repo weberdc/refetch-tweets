@@ -1,7 +1,9 @@
 apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'application'
 
-mainClassName = 'au.org.dcw.twitter.ingest.RefetchTweets'
+mainClassName = 'au.org.dcw.twitter.ingest.RefetchTweets2'
 
 task wrapper(type: Wrapper) {
   gradleVersion = '4.2'
@@ -26,6 +28,9 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.12'
     compile 'org.twitter4j:twitter4j-core:4.0.6'
     compile 'com.beust:jcommander:1.72'
+    compile("com.fasterxml.jackson.core:jackson-core:2.9.1")
+    compile("com.fasterxml.jackson.core:jackson-databind:2.9.1")
+    compile group: 'com.google.guava', name: 'guava', version: '23.0'
 }
 
 def timestamp() {
