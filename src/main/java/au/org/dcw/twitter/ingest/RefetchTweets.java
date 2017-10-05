@@ -62,7 +62,7 @@ import twitter4j.conf.ConfigurationBuilder;
  *
  * @author <a href="mailto:weber.dc@gmail.com">Derek Weber</a>
  */
-class RefetchTweets2 {
+class RefetchTweets {
 
     /** Twitter's preferred date time format. */
     public static final DateTimeFormatter TWITTER_TIMESTAMP_FORMAT =
@@ -92,7 +92,7 @@ class RefetchTweets2 {
     public static boolean help = false;
 
     public static void main(String[] args) throws IOException {
-        RefetchTweets2 theApp = new RefetchTweets2();
+        RefetchTweets theApp = new RefetchTweets();
 
         // JCommander instance parses args, populates fields of theApp
         JCommander argsParser = JCommander.newBuilder()
