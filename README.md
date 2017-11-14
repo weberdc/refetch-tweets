@@ -22,7 +22,6 @@ mode.
 ## Requirements:
 
  + Java Development Kit 1.8
- + [Apache Groovy](http://groovy-lang.org) (Apache 2.0 licence)
  + [Twitter4J](http://twitter4j.org) (Apache 2.0 licence)
    + depends on [JSON](http://json.org) ([JSON licence](http://www.json.org/license.html))
  + [FasterXML](http://wiki.fasterxml.com/JacksonHome) (Apache 2.0 licence)
